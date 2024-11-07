@@ -1,0 +1,49 @@
+{
+  "name": "userwave",
+  "version": "0.0.1",
+  "description": "[![NPM Version](https://img.shields.io/npm/v/userwave)](https://www.npmjs.com/package/userwave)\r [![License](https://img.shields.io/npm/l/userwave)](LICENSE)\r [![Build Status](https://img.shields.io/github/workflow/status/encodeopl/userwave/CI)](https://github.com/encodeopl/userwave/actions)",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/encodeopl/userwave.git"
+  },
+  "scripts": {
+    "build": "jest --passWithNoTests && rimraf dist && rollup -c",
+    "start": "rimraf dist && rollup -c -w",
+    "test": "jest",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "encodeopl",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "autoprefixer": "^10.4.20",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "rollup": "^4.24.4",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  }
+}
